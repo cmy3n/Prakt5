@@ -1,0 +1,30 @@
+﻿<Window x:Class="WpfApp1.UserMainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="UserMainWindow" Height="450" Width="800">
+    <Grid Background="PaleGreen">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="9*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Расписание" TextAlignment="Center" FontSize="32" FontWeight="Bold" Grid.Column="1"/>
+        <DataGrid x:Name="SheduleDG" Grid.Row="1" Grid.Column="1" Background="PaleGreen" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Number_Route}" Header="Номер маршрута"/>
+                <DataGridTextColumn Binding="{Binding Departure_Time}" Header="Время отправки"/>
+                <DataGridTextColumn Binding="{Binding Arrival_Time}" Header="Время прибытия"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="back_button" Click="back_button_Click" Content="Назад" Grid.Row="2"/>
+    </Grid>
+</Window>

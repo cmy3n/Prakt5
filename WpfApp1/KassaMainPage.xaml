@@ -1,0 +1,32 @@
+﻿<Page x:Class="WpfApp1.KassaMainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp1"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="KassaMainPage">
+
+    <Grid Background="Aqua">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Button x:Name="back_button" Click="back_button_Click" Grid.Row="4" Content="Назад"/>
+
+        <Button x:Name="clients" Content="Клиенты" Grid.Row="2" Grid.Column="1" Click="clients_Click"/>
+        <Button x:Name="Tickets" Content="Билеты" Grid.Row="2" Grid.Column="3" Click="Tickets_Click"/>
+    </Grid>
+</Page>
